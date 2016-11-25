@@ -8,7 +8,7 @@ defmodule WhiteBread.DefaultContext do
   end
 
   then_ ~r/^(?<x>\S+) should (?<not>not )?equal (?<y>\S+)$/, fn state, %{x: x, y: y, not: negation} ->
-    assert (x == y) == (negation == "")
+    assert (x == y) == (negation == "") # TODO: figure out how to use ESpec "expect" here
     {:ok, state}
   end
 end
