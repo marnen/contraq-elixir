@@ -1,14 +1,14 @@
-defmodule ContraqElixir.Endpoint do
-  use Phoenix.Endpoint, otp_app: :contraq_elixir
+defmodule Contraq.Endpoint do
+  use Phoenix.Endpoint, otp_app: :contraq
 
-  socket "/socket", ContraqElixir.UserSocket
+  socket "/socket", Contraq.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :contraq_elixir, gzip: false,
+    at: "/", from: :contraq, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,8 +35,8 @@ defmodule ContraqElixir.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_contraq_elixir_key",
+    key: "_contraq_key",
     signing_salt: "qWlh98Pk"
 
-  plug ContraqElixir.Router
+  plug Contraq.Router
 end

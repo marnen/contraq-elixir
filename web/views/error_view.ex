@@ -1,5 +1,5 @@
-defmodule ContraqElixir.ErrorView do
-  use ContraqElixir.Web, :view
+defmodule Contraq.ErrorView do
+  use Contraq.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

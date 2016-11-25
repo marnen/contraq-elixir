@@ -1,4 +1,4 @@
-defmodule ContraqElixir.ConnCase do
+defmodule Contraq.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,23 +20,23 @@ defmodule ContraqElixir.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias ContraqElixir.Repo
+      alias Contraq.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import ContraqElixir.Router.Helpers
+      import Contraq.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint ContraqElixir.Endpoint
+      @endpoint Contraq.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ContraqElixir.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Contraq.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ContraqElixir.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Contraq.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

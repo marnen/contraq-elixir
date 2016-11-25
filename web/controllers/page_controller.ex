@@ -1,5 +1,5 @@
-defmodule ContraqElixir.PageController do
-  use ContraqElixir.Web, :controller
+defmodule Contraq.PageController do
+  use Contraq.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

@@ -1,4 +1,4 @@
-defmodule ContraqElixir do
+defmodule Contraq do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -9,23 +9,23 @@ defmodule ContraqElixir do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(ContraqElixir.Repo, []),
+      supervisor(Contraq.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(ContraqElixir.Endpoint, []),
-      # Start your own worker by calling: ContraqElixir.Worker.start_link(arg1, arg2, arg3)
-      # worker(ContraqElixir.Worker, [arg1, arg2, arg3]),
+      supervisor(Contraq.Endpoint, []),
+      # Start your own worker by calling: Contraq.Worker.start_link(arg1, arg2, arg3)
+      # worker(Contraq.Worker, [arg1, arg2, arg3]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: ContraqElixir.Supervisor]
+    opts = [strategy: :one_for_one, name: Contraq.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    ContraqElixir.Endpoint.config_change(changed, removed)
+    Contraq.Endpoint.config_change(changed, removed)
     :ok
   end
 end

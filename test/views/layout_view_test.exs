@@ -1,3 +1,3 @@
-defmodule ContraqElixir.LayoutViewTest do
-  use ContraqElixir.ConnCase, async: true
+defmodule Contraq.LayoutViewTest do
+  use Contraq.ConnCase, async: true
 end

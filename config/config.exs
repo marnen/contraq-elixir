@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :contraq_elixir,
-  ecto_repos: [ContraqElixir.Repo]
+config :contraq,
+  ecto_repos: [Contraq.Repo]
 
 # Configures the endpoint
-config :contraq_elixir, ContraqElixir.Endpoint,
+config :contraq, Contraq.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "I+ye+MfP0HwO7hopM2APjrFmGaiyReMqZtYic+Gwle7uB72sAXkswfq4q6dJ7FjA",
-  render_errors: [view: ContraqElixir.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: ContraqElixir.PubSub,
+  render_errors: [view: Contraq.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Contraq.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

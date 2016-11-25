@@ -1,4 +1,4 @@
-defmodule ContraqElixir.ErrorHelpers do
+defmodule Contraq.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule ContraqElixir.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(ContraqElixir.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Contraq.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ContraqElixir.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Contraq.Gettext, "errors", msg, opts)
     end
   end
 end

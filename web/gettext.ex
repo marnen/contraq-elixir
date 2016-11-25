@@ -1,11 +1,11 @@
-defmodule ContraqElixir.Gettext do
+defmodule Contraq.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import ContraqElixir.Gettext
+      import Contraq.Gettext
 
       # Simple translation
       gettext "Here is the string to translate"
@@ -20,5 +20,5 @@ defmodule ContraqElixir.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :contraq_elixir
+  use Gettext, otp_app: :contraq
 end

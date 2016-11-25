@@ -1,5 +1,5 @@
-defmodule ContraqElixir.PageControllerTest do
-  use ContraqElixir.ConnCase
+defmodule Contraq.PageControllerTest do
+  use Contraq.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

@@ -1,12 +1,12 @@
-defmodule ContraqElixir.Web do
+defmodule Contraq.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use ContraqElixir.Web, :controller
-      use ContraqElixir.Web, :view
+      use Contraq.Web, :controller
+      use Contraq.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule ContraqElixir.Web do
     quote do
       use Phoenix.Controller
 
-      alias ContraqElixir.Repo
+      alias Contraq.Repo
       import Ecto
       import Ecto.Query
 
-      import ContraqElixir.Router.Helpers
-      import ContraqElixir.Gettext
+      import Contraq.Router.Helpers
+      import Contraq.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule ContraqElixir.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import ContraqElixir.Router.Helpers
-      import ContraqElixir.ErrorHelpers
-      import ContraqElixir.Gettext
+      import Contraq.Router.Helpers
+      import Contraq.ErrorHelpers
+      import Contraq.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule ContraqElixir.Web do
     quote do
       use Phoenix.Channel
 
-      alias ContraqElixir.Repo
+      alias Contraq.Repo
       import Ecto
       import Ecto.Query
-      import ContraqElixir.Gettext
+      import Contraq.Gettext
     end
   end
 

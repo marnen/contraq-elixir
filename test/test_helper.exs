@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(ContraqElixir.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Contraq.Repo, :manual)
 

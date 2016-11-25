@@ -1,3 +1,3 @@
-defmodule ContraqElixir.PageViewTest do
-  use ContraqElixir.ConnCase, async: true
+defmodule Contraq.PageViewTest do
+  use Contraq.ConnCase, async: true
 end

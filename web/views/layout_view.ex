@@ -1,3 +1,3 @@
-defmodule ContraqElixir.LayoutView do
-  use ContraqElixir.Web, :view
+defmodule Contraq.LayoutView do
+  use Contraq.Web, :view
 end

@@ -1,3 +1,3 @@
-defmodule ContraqElixir.PageView do
-  use ContraqElixir.Web, :view
+defmodule Contraq.PageView do
+  use Contraq.Web, :view
 end

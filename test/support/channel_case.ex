@@ -1,4 +1,4 @@
-defmodule ContraqElixir.ChannelCase do
+defmodule Contraq.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule ContraqElixir.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias ContraqElixir.Repo
+      alias Contraq.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint ContraqElixir.Endpoint
+      @endpoint Contraq.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ContraqElixir.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Contraq.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ContraqElixir.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Contraq.Repo, {:shared, self()})
     end
 
     :ok

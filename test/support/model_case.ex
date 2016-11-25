@@ -1,4 +1,4 @@
-defmodule ContraqElixir.ModelCase do
+defmodule Contraq.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,20 +16,20 @@ defmodule ContraqElixir.ModelCase do
 
   using do
     quote do
-      alias ContraqElixir.Repo
+      alias Contraq.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import ContraqElixir.ModelCase
+      import Contraq.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ContraqElixir.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Contraq.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ContraqElixir.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Contraq.Repo, {:shared, self()})
     end
 
     :ok
@@ -59,7 +59,7 @@ defmodule ContraqElixir.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&ContraqElixir.ErrorHelpers.translate_error/1)
+    |> Ecto.Changeset.traverse_errors(&Contraq.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end
